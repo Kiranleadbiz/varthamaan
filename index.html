@@ -199,6 +199,22 @@
   .level-card h3{color:var(--purple);font-size:1.25rem;margin-bottom:10px;}
   .level-card p{color:#6b5b63;font-size:0.92rem;line-height:1.6;}
 
+  /* WEEKEND WORKSHOPS */
+  .workshops-wrap{background:var(--cream-2);}
+  .workshops-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;}
+  .workshop-card{
+    background:#fff;border-radius:18px;padding:28px 20px;text-align:center;box-shadow:var(--shadow);
+    transition:transform .25s;
+  }
+  .workshop-card:hover{transform:translateY(-6px);}
+  .workshop-icon{
+    width:58px;height:58px;border-radius:50%;margin:0 auto 16px;
+    background:var(--cream-2);color:var(--orange);
+    display:flex;align-items:center;justify-content:center;font-size:1.6rem;
+  }
+  .workshop-card h3{font-size:1rem;color:var(--purple);margin-bottom:8px;}
+  .workshop-card p{font-size:0.85rem;color:#7a6b72;line-height:1.5;}
+
   /* LOCATION + CONTACT */
   .location-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;}
   .info-card{
@@ -284,6 +300,7 @@
     .schedule-grid{grid-template-columns:1fr;}
     .benefits-grid{grid-template-columns:repeat(2,1fr);}
     .levels-grid{grid-template-columns:1fr;}
+    .workshops-grid{grid-template-columns:repeat(2,1fr);}
     .location-grid{grid-template-columns:1fr;}
     .nav-links{
       position:fixed;top:64px;left:0;right:0;background:var(--cream);
@@ -299,6 +316,7 @@
   }
   @media(max-width:600px){
     .benefits-grid{grid-template-columns:1fr;}
+    .workshops-grid{grid-template-columns:1fr;}
     .hero-ctas{flex-direction:column;}
     .btn{width:100%;justify-content:center;}
     .cta-register{margin:0 16px;padding:36px 22px;}
@@ -315,6 +333,7 @@
       <a href="#schedule">Schedule</a>
       <a href="#benefits">Benefits</a>
       <a href="#levels">Yoga Levels</a>
+      <a href="#workshops">Weekend Workshops</a>
       <a href="#location">Location</a>
       <a href="#register">Register</a>
     </div>
@@ -336,7 +355,8 @@
       <div class="hero-stats">
         <div class="hero-stat"><b>6</b><span>Daily Batches</span></div>
         <div class="hero-stat"><b>3</b><span>Yoga Styles</span></div>
-        <div class="hero-stat"><b>7 Days</b><span>A Week</span></div>
+        <div class="hero-stat"><b>5 Days</b><span>A Week</span></div>
+        <div class="hero-stat"><b>Weekend</b><span>Workshops</span></div>
         <div class="hero-stat"><b>Online</b><span>+ In-Studio</span></div>
       </div>
     </div>
@@ -358,7 +378,7 @@
     <div class="section-head">
       <span class="section-tag">Class Timings</span>
       <h2>Find the Batch That Fits Your Day</h2>
-      <p>Pick a time that works for you — advanced, therapeutic, or general yoga sessions are available every day.</p>
+      <p>Pick a time that works for you — advanced, therapeutic, or general yoga sessions run 5 days a week (Monday–Friday).</p>
     </div>
 
     <div class="schedule-grid">
@@ -426,7 +446,7 @@
       <div class="benefit-card">
         <div class="benefit-icon">❤️</div>
         <h3>Wellness</h3>
-        <p>Support heart health, reduce stress and boost overall well-being every day.</p>
+        <p>Support heart health, reduce stress and boost overall well-being all week long.</p>
       </div>
     </div>
   </div>
@@ -452,6 +472,53 @@
         <h3>General Yoga</h3>
         <p>A well-rounded practice suited for all levels, building a strong foundation. Available 7–8 AM and 6–7 PM.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="section workshops-wrap" id="workshops">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">Saturdays &amp; Sundays</span>
+      <h2>Weekend Workshops</h2>
+      <p>Go deeper on weekends with focused workshops beyond the regular weekday schedule.</p>
+    </div>
+    <div class="workshops-grid">
+      <div class="workshop-card">
+        <div class="workshop-icon">🧘‍♂️</div>
+        <h3>Advanced Yogasanas</h3>
+        <p>Intensive postures and sequences for practitioners ready to deepen their practice.</p>
+      </div>
+      <div class="workshop-card">
+        <div class="workshop-icon">🪢</div>
+        <h3>Aerial Yoga</h3>
+        <p>Suspended, hammock-supported yoga that builds strength and core control.</p>
+      </div>
+      <div class="workshop-card">
+        <div class="workshop-icon">🌿</div>
+        <h3>Restorative Yoga</h3>
+        <p>Slow, supported poses designed to release tension and aid recovery.</p>
+      </div>
+      <div class="workshop-card">
+        <div class="workshop-icon">🧠</div>
+        <h3>Stress Management</h3>
+        <p>Breathing and mindfulness techniques to manage stress and anxiety.</p>
+      </div>
+      <div class="workshop-card">
+        <div class="workshop-icon">✨</div>
+        <h3>And Many More</h3>
+        <p>New themes added regularly — message us to see what's coming up next.</p>
+      </div>
+    </div>
+    <div class="online-strip" style="margin-top:34px;">
+      <div class="left">
+        <div class="ic-lg">📅</div>
+        <div>
+          <h3>Reserve Your Weekend Spot</h3>
+          <p>Workshop seats are limited — book early on WhatsApp.</p>
+        </div>
+      </div>
+      <a href="https://wa.me/916303306297" class="tag" target="_blank" rel="noopener">Ask About Workshops</a>
     </div>
   </div>
 </section>
@@ -483,7 +550,7 @@
           <div class="ic">⏰</div>
           <div>
             <h3>Class Hours</h3>
-            <p>5:00 AM – 8:00 AM · 10:30 AM – 11:30 AM · 5:00 PM – 7:00 PM, daily.</p>
+            <p>5:00 AM – 8:00 AM · 10:30 AM – 11:30 AM · 5:00 PM – 7:00 PM, Monday–Friday. Special workshops on weekends.</p>
           </div>
         </div>
       </div>
@@ -501,7 +568,7 @@
 <section class="section" id="register" style="padding-top:0;">
   <div class="cta-register">
     <h2>Join Varthamaan Yoga Today</h2>
-    <p>Make yoga a part of your daily life. Message us on WhatsApp to reserve your spot.</p>
+    <p>Make yoga a part of your life — 5 days a week, plus weekend workshops. Message us on WhatsApp to reserve your spot.</p>
     <a href="https://wa.me/916303306297" class="whatsapp-btn" target="_blank" rel="noopener">
       <span class="wa-ic">✆</span> 6303306297
     </a>
@@ -513,12 +580,13 @@
     <div class="footer-top">
       <div class="footer-col" style="max-width:320px;">
         <div class="footer-brand">VARTHAMAAN <span>YOGA</span></div>
-        <p>Daily yoga classes for all levels in Tadepalli. Strength, flexibility, balance and wellness — every day, in-studio or online.</p>
+        <p>Yoga classes for all levels in Tadepalli, 5 days a week, plus weekend workshops. Strength, flexibility, balance and wellness — in-studio or online.</p>
       </div>
       <div class="footer-col">
         <h4>Quick Links</h4>
         <p><a href="#schedule">Schedule</a></p>
         <p><a href="#levels">Yoga Levels</a></p>
+        <p><a href="#workshops">Weekend Workshops</a></p>
         <p><a href="#location">Location</a></p>
       </div>
       <div class="footer-col">
