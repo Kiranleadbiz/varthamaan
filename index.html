@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Varthamaan Yoga — Tadepalli | Daily Yoga Classes for All Levels</title>
+<meta name="description" content="Varthamaan Yoga, Tadepalli. Daily morning, mid-morning and evening yoga batches for all levels. Advanced, Therapeutic & General Yoga. Online classes also available. Register: 6303306297" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --purple: #3b1f4d;
+    --purple-dark: #2a1638;
+    --orange: #e07a1f;
+    --orange-light: #f2994a;
+    --cream: #faf3e8;
+    --cream-2: #f5ead9;
+    --text: #3a2e34;
+    --white: #ffffff;
+    --shadow: 0 10px 30px rgba(59,31,77,0.12);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Poppins', sans-serif;
+    color:var(--text);
+    background:var(--cream);
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.script{font-family:'Playfair Display', serif;}
+  a{text-decoration:none;color:inherit;}
+  img{max-width:100%;display:block;}
+  .container{max-width:1140px;margin:0 auto;padding:0 24px;}
+
+  /* NAV */
+  .nav{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    background:rgba(250,243,232,0.9);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid rgba(59,31,77,0.08);
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1140px;margin:0 auto;}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.05rem;color:var(--purple);}
+  .brand .dot{color:var(--orange);}
+  .nav-links{display:flex;gap:28px;font-weight:500;font-size:0.95rem;}
+  .nav-links a{color:var(--purple);opacity:0.85;transition:opacity .2s;}
+  .nav-links a:hover{opacity:1;}
+  .nav-cta{
+    background:var(--orange);color:#fff;padding:10px 20px;border-radius:30px;font-weight:600;font-size:0.9rem;
+    box-shadow:0 4px 14px rgba(224,122,31,0.35);
+    display:flex;align-items:center;gap:6px;
+  }
+  .nav-toggle{display:none;background:none;border:none;font-size:1.6rem;color:var(--purple);cursor:pointer;}
+
+  /* HERO */
+  .hero{
+    position:relative;
+    padding:140px 0 90px;
+    background:
+      radial-gradient(circle at 85% 15%, rgba(224,122,31,0.12), transparent 45%),
+      radial-gradient(circle at 10% 90%, rgba(59,31,77,0.08), transparent 40%),
+      var(--cream);
+    overflow:hidden;
+  }
+  .hero-grid{
+    display:grid;grid-template-columns:1.1fr 0.9fr;gap:50px;align-items:center;
+  }
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--cream-2);color:var(--orange);
+    padding:8px 16px;border-radius:30px;font-weight:600;font-size:0.8rem;letter-spacing:0.5px;
+    margin-bottom:20px;text-transform:uppercase;
+    border:1px solid rgba(224,122,31,0.25);
+  }
+  .hero h1{
+    font-size:3rem;line-height:1.12;color:var(--purple);font-weight:700;margin-bottom:18px;
+  }
+  .hero h1 span{color:var(--orange);}
+  .hero p.lead{
+    font-size:1.15rem;color:#5c4d55;margin-bottom:30px;max-width:480px;line-height:1.6;
+  }
+  .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:36px;}
+  .btn{
+    padding:15px 30px;border-radius:32px;font-weight:600;font-size:1rem;
+    display:inline-flex;align-items:center;gap:8px;
+    transition:transform .2s, box-shadow .2s;
+    cursor:pointer;border:none;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{background:var(--orange);color:#fff;box-shadow:0 8px 24px rgba(224,122,31,0.4);}
+  .btn-outline{background:transparent;color:var(--purple);border:2px solid var(--purple);}
+  .btn-outline:hover{background:var(--purple);color:#fff;}
+  .hero-stats{display:flex;gap:30px;flex-wrap:wrap;}
+  .hero-stat b{display:block;font-size:1.6rem;color:var(--purple);font-family:'Playfair Display',serif;}
+  .hero-stat span{font-size:0.85rem;color:#7a6b72;}
+
+  .hero-visual{
+    position:relative;border-radius:28px;overflow:hidden;
+    box-shadow:var(--shadow);
+    aspect-ratio:4/5;
+    background:linear-gradient(160deg,var(--purple),var(--purple-dark));
+  }
+  .hero-visual img{width:100%;height:100%;object-fit:cover;}
+  .badge-float{
+    position:absolute;bottom:20px;left:20px;right:20px;
+    background:rgba(255,255,255,0.92);backdrop-filter:blur(6px);
+    border-radius:16px;padding:14px 18px;
+    display:flex;align-items:center;gap:12px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+  }
+  .badge-float .icon-circle{
+    width:42px;height:42px;border-radius:50%;background:var(--orange);
+    display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.2rem;flex-shrink:0;
+  }
+  .badge-float b{display:block;font-size:0.95rem;color:var(--purple);}
+  .badge-float span{font-size:0.78rem;color:#7a6b72;}
+
+  /* SECTION HEADINGS */
+  .section{padding:90px 0;}
+  .section-head{text-align:center;max-width:640px;margin:0 auto 50px;}
+  .section-tag{
+    color:var(--orange);font-weight:700;letter-spacing:1.5px;text-transform:uppercase;font-size:0.8rem;margin-bottom:10px;display:block;
+  }
+  .section-head h2{font-size:2.3rem;color:var(--purple);line-height:1.2;}
+  .section-head p{margin-top:14px;color:#6b5b63;font-size:1.05rem;}
+
+  /* SCHEDULE */
+  .schedule-wrap{background:var(--cream-2);}
+  .schedule-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+  .schedule-card{
+    background:#fff;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);
+    transition:transform .25s;
+  }
+  .schedule-card:hover{transform:translateY(-6px);}
+  .schedule-card-head{
+    padding:20px 22px;color:#fff;display:flex;align-items:center;gap:12px;font-weight:700;font-size:1.05rem;
+  }
+  .schedule-card-head .ic{
+    width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,0.22);
+    display:flex;align-items:center;justify-content:center;font-size:1.1rem;
+  }
+  .head-morning{background:linear-gradient(120deg,var(--purple),#5a3372);}
+  .head-mid{background:linear-gradient(120deg,#e0951f,var(--orange));}
+  .head-evening{background:linear-gradient(120deg,var(--orange),#d9531f);}
+  .schedule-rows{padding:8px 22px 20px;}
+  .schedule-row{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:14px 0;border-bottom:1px dashed #e7dfd2;gap:10px;
+  }
+  .schedule-row:last-child{border-bottom:none;}
+  .schedule-time{font-weight:700;color:var(--purple);font-size:0.92rem;white-space:nowrap;}
+  .schedule-type{
+    background:var(--cream-2);color:var(--orange);font-weight:600;font-size:0.8rem;
+    padding:5px 12px;border-radius:20px;white-space:nowrap;
+  }
+
+  .online-strip{
+    margin-top:34px;
+    background:linear-gradient(120deg,var(--purple),var(--purple-dark));
+    border-radius:20px;padding:26px 32px;
+    display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;
+    color:#fff;box-shadow:var(--shadow);
+  }
+  .online-strip .left{display:flex;align-items:center;gap:16px;}
+  .online-strip .ic-lg{
+    width:56px;height:56px;border-radius:16px;background:rgba(255,255,255,0.15);
+    display:flex;align-items:center;justify-content:center;font-size:1.6rem;
+  }
+  .online-strip h3{font-size:1.2rem;margin-bottom:4px;}
+  .online-strip p{opacity:0.85;font-size:0.9rem;}
+  .online-strip .tag{
+    background:var(--orange);padding:8px 18px;border-radius:20px;font-weight:700;font-size:0.85rem;
+  }
+
+  /* BENEFITS */
+  .benefits-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+  .benefit-card{
+    background:#fff;border-radius:18px;padding:32px 24px;text-align:center;box-shadow:var(--shadow);
+    transition:transform .25s;
+  }
+  .benefit-card:hover{transform:translateY(-6px);}
+  .benefit-icon{
+    width:64px;height:64px;border-radius:50%;margin:0 auto 18px;
+    background:var(--cream-2);color:var(--orange);
+    display:flex;align-items:center;justify-content:center;font-size:1.8rem;
+  }
+  .benefit-card h3{font-size:1.1rem;color:var(--purple);margin-bottom:8px;}
+  .benefit-card p{font-size:0.88rem;color:#7a6b72;line-height:1.5;}
+
+  /* LEVELS */
+  .levels-wrap{background:var(--cream-2);}
+  .levels-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .level-card{
+    background:#fff;border-radius:20px;padding:30px 26px;box-shadow:var(--shadow);
+    border-top:4px solid var(--orange);
+  }
+  .level-card:nth-child(2){border-top-color:var(--purple);}
+  .level-card:nth-child(3){border-top-color:#c94f4f;}
+  .level-card h3{color:var(--purple);font-size:1.25rem;margin-bottom:10px;}
+  .level-card p{color:#6b5b63;font-size:0.92rem;line-height:1.6;}
+
+  /* LOCATION + CONTACT */
+  .location-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;}
+  .info-card{
+    background:#fff;border-radius:20px;padding:30px;box-shadow:var(--shadow);
+    display:flex;gap:16px;align-items:flex-start;margin-bottom:20px;
+  }
+  .info-card .ic{
+    width:48px;height:48px;border-radius:12px;background:var(--cream-2);color:var(--orange);
+    display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;
+  }
+  .info-card h3{color:var(--purple);font-size:1.05rem;margin-bottom:6px;}
+  .info-card p{color:#6b5b63;font-size:0.92rem;line-height:1.55;}
+  .map-visual{
+    border-radius:20px;overflow:hidden;box-shadow:var(--shadow);height:100%;min-height:340px;
+    background:linear-gradient(135deg,var(--purple),var(--purple-dark));
+    display:flex;align-items:center;justify-content:center;color:#fff;text-align:center;padding:40px;position:relative;
+  }
+  .map-visual::before{
+    content:"";position:absolute;inset:0;
+    background-image:radial-gradient(circle,rgba(255,255,255,0.08) 1px,transparent 1px);
+    background-size:22px 22px;
+  }
+  .map-visual .pin{
+    width:70px;height:70px;border-radius:50%;background:var(--orange);
+    display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 18px;
+    box-shadow:0 0 0 12px rgba(224,122,31,0.2);position:relative;z-index:1;
+  }
+  .map-visual h3{position:relative;z-index:1;font-size:1.3rem;margin-bottom:8px;}
+  .map-visual p{position:relative;z-index:1;opacity:0.85;font-size:0.95rem;}
+
+  /* CTA REGISTER */
+  .cta-register{
+    background:linear-gradient(120deg,var(--orange),#d9531f);
+    border-radius:26px;padding:50px 40px;text-align:center;color:#fff;
+    box-shadow:var(--shadow);
+    margin:0 24px;
+    max-width:1092px;margin-left:auto;margin-right:auto;
+  }
+  .cta-register h2{font-size:2rem;margin-bottom:12px;}
+  .cta-register p{opacity:0.92;margin-bottom:28px;font-size:1.05rem;}
+  .whatsapp-btn{
+    display:inline-flex;align-items:center;gap:12px;
+    background:#fff;color:var(--orange);padding:18px 34px;border-radius:36px;
+    font-weight:800;font-size:1.3rem;box-shadow:0 10px 26px rgba(0,0,0,0.2);
+    transition:transform .2s;
+  }
+  .whatsapp-btn:hover{transform:scale(1.04);}
+  .whatsapp-btn .wa-ic{
+    width:34px;height:34px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1rem;
+  }
+
+  /* FOOTER */
+  footer{background:var(--purple-dark);color:#fff;padding:50px 0 24px;}
+  .footer-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;margin-bottom:36px;}
+  .footer-brand{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;margin-bottom:10px;}
+  .footer-brand span{color:var(--orange);}
+  .footer-col p, .footer-col a{color:rgba(255,255,255,0.7);font-size:0.9rem;line-height:1.8;}
+  .footer-col h4{font-size:0.95rem;margin-bottom:12px;color:#fff;}
+  .footer-bottom{
+    border-top:1px solid rgba(255,255,255,0.12);padding-top:20px;
+    text-align:center;font-size:0.82rem;color:rgba(255,255,255,0.55);
+    font-style:italic;
+  }
+  .footer-bottom .accent{color:var(--orange-light);font-style:normal;font-weight:600;}
+
+  /* FLOATING WHATSAPP */
+  .float-wa{
+    position:fixed;bottom:24px;right:24px;z-index:200;
+    width:60px;height:60px;border-radius:50%;background:#25D366;color:#fff;
+    display:flex;align-items:center;justify-content:center;font-size:1.7rem;
+    box-shadow:0 8px 22px rgba(37,211,102,0.5);
+    animation:pulse 2.2s infinite;
+  }
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(37,211,102,0.5);}
+    70%{box-shadow:0 0 0 14px rgba(37,211,102,0);}
+    100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
+  }
+
+  @media(max-width:960px){
+    .hero-grid{grid-template-columns:1fr;}
+    .hero-visual{max-width:420px;margin:0 auto;order:-1;}
+    .schedule-grid{grid-template-columns:1fr;}
+    .benefits-grid{grid-template-columns:repeat(2,1fr);}
+    .levels-grid{grid-template-columns:1fr;}
+    .location-grid{grid-template-columns:1fr;}
+    .nav-links{
+      position:fixed;top:64px;left:0;right:0;background:var(--cream);
+      flex-direction:column;padding:20px 24px;gap:0;
+      box-shadow:0 10px 20px rgba(0,0,0,0.08);
+      transform:translateY(-150%);opacity:0;transition:all .3s;
+    }
+    .nav-links.open{transform:translateY(0);opacity:1;}
+    .nav-links a{padding:12px 0;border-bottom:1px solid rgba(59,31,77,0.08);}
+    .nav-toggle{display:block;}
+    .nav-cta{display:none;}
+    .hero h1{font-size:2.2rem;}
+  }
+  @media(max-width:600px){
+    .benefits-grid{grid-template-columns:1fr;}
+    .hero-ctas{flex-direction:column;}
+    .btn{width:100%;justify-content:center;}
+    .cta-register{margin:0 16px;padding:36px 22px;}
+    .whatsapp-btn{font-size:1.05rem;padding:16px 22px;}
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="brand">🕉️ VARTHAMAAN<span class="dot">&nbsp;YOGA</span></div>
+    <div class="nav-links" id="navLinks">
+      <a href="#schedule">Schedule</a>
+      <a href="#benefits">Benefits</a>
+      <a href="#levels">Yoga Levels</a>
+      <a href="#location">Location</a>
+      <a href="#register">Register</a>
+    </div>
+    <a href="https://wa.me/916303306297" class="nav-cta" target="_blank" rel="noopener">📱 6303306297</a>
+    <button class="nav-toggle" id="navToggle">☰</button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">✦ Daily Yoga Classes for All Levels ✦</span>
+      <h1>Varthamaan Yoga <span>— Tadepalli</span></h1>
+      <p class="lead">Morning, mid-morning &amp; evening batches led by experienced instructors. Build strength, flexibility, balance and wellness — in-studio or online, every single day.</p>
+      <div class="hero-ctas">
+        <a href="https://wa.me/916303306297" class="btn btn-primary" target="_blank" rel="noopener">💬 Register on WhatsApp</a>
+        <a href="#schedule" class="btn btn-outline">View Batch Timings</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><b>6</b><span>Daily Batches</span></div>
+        <div class="hero-stat"><b>3</b><span>Yoga Styles</span></div>
+        <div class="hero-stat"><b>7 Days</b><span>A Week</span></div>
+        <div class="hero-stat"><b>Online</b><span>+ In-Studio</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop" alt="Yoga practitioner in meditation pose" />
+      <div class="badge-float">
+        <div class="icon-circle">🧘</div>
+        <div>
+          <b>Join today</b>
+          <span>Strength · Flexibility · Balance · Wellness</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="section schedule-wrap" id="schedule">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">Class Timings</span>
+      <h2>Find the Batch That Fits Your Day</h2>
+      <p>Pick a time that works for you — advanced, therapeutic, or general yoga sessions are available every day.</p>
+    </div>
+
+    <div class="schedule-grid">
+      <div class="schedule-card">
+        <div class="schedule-card-head head-morning"><span class="ic">🌅</span> Morning Batches</div>
+        <div class="schedule-rows">
+          <div class="schedule-row"><span class="schedule-time">5:00 AM – 6:00 AM</span><span class="schedule-type">Advanced Yoga</span></div>
+          <div class="schedule-row"><span class="schedule-time">6:00 AM – 7:00 AM</span><span class="schedule-type">Therapeutic Yoga</span></div>
+          <div class="schedule-row"><span class="schedule-time">7:00 AM – 8:00 AM</span><span class="schedule-type">General Yoga</span></div>
+        </div>
+      </div>
+
+      <div class="schedule-card">
+        <div class="schedule-card-head head-mid"><span class="ic">☀️</span> Mid-Morning Batch</div>
+        <div class="schedule-rows">
+          <div class="schedule-row"><span class="schedule-time">10:30 AM – 11:30 AM</span><span class="schedule-type">Therapeutic Yoga</span></div>
+        </div>
+      </div>
+
+      <div class="schedule-card">
+        <div class="schedule-card-head head-evening"><span class="ic">🌇</span> Evening Batches</div>
+        <div class="schedule-rows">
+          <div class="schedule-row"><span class="schedule-time">5:00 PM – 6:00 PM</span><span class="schedule-type">Advanced Yoga</span></div>
+          <div class="schedule-row"><span class="schedule-time">6:00 PM – 7:00 PM</span><span class="schedule-type">General Yoga</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="online-strip">
+      <div class="left">
+        <div class="ic-lg">💻</div>
+        <div>
+          <h3>Online Classes Also Available</h3>
+          <p>Can't make it to the studio? Join live sessions from anywhere.</p>
+        </div>
+      </div>
+      <a href="https://wa.me/916303306297" class="tag" target="_blank" rel="noopener">Ask About Online Batches</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="benefits">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">Why Yoga</span>
+      <h2>Make Yoga a Part of Your Daily Life</h2>
+      <p>Consistent practice brings lasting results — for your body, mind and everyday energy.</p>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">💪</div>
+        <h3>Strength</h3>
+        <p>Build functional, full-body strength through mindful postures and controlled movement.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🌸</div>
+        <h3>Flexibility</h3>
+        <p>Improve range of motion and ease everyday stiffness with guided stretching.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🤸</div>
+        <h3>Balance</h3>
+        <p>Sharpen physical and mental balance through focused, breath-led practice.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">❤️</div>
+        <h3>Wellness</h3>
+        <p>Support heart health, reduce stress and boost overall well-being every day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section levels-wrap" id="levels">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">For Every Practitioner</span>
+      <h2>Yoga Styles We Offer</h2>
+      <p>Whether you're a beginner or advanced practitioner, there's a batch designed for you.</p>
+    </div>
+    <div class="levels-grid">
+      <div class="level-card">
+        <h3>Advanced Yoga</h3>
+        <p>Deeper postures and intensive sequences for experienced practitioners looking to push their practice further. Available 5–6 AM and 5–6 PM.</p>
+      </div>
+      <div class="level-card">
+        <h3>Therapeutic Yoga</h3>
+        <p>Gentle, restorative sessions focused on healing, pain relief and recovery. Available 6–7 AM and 10:30–11:30 AM.</p>
+      </div>
+      <div class="level-card">
+        <h3>General Yoga</h3>
+        <p>A well-rounded practice suited for all levels, building a strong foundation. Available 7–8 AM and 6–7 PM.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="location">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">Visit Us</span>
+      <h2>Studio Location</h2>
+      <p>Conveniently located in the heart of Tadepalli.</p>
+    </div>
+    <div class="location-grid">
+      <div>
+        <div class="info-card">
+          <div class="ic">📍</div>
+          <div>
+            <h3>Address</h3>
+            <p>2nd Floor, Above Bank of Baroda, Near Aravinda High School, Tadepalli</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="ic">📱</div>
+          <div>
+            <h3>Register / WhatsApp</h3>
+            <p>6303306297 — message us to book your slot or ask about online classes.</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="ic">⏰</div>
+          <div>
+            <h3>Class Hours</h3>
+            <p>5:00 AM – 8:00 AM · 10:30 AM – 11:30 AM · 5:00 PM – 7:00 PM, daily.</p>
+          </div>
+        </div>
+      </div>
+      <div class="map-visual">
+        <div>
+          <div class="pin">📍</div>
+          <h3>Varthamaan Yoga</h3>
+          <p>2nd Floor, Above Bank of Baroda,<br/>Near Aravinda High School, Tadepalli</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="register" style="padding-top:0;">
+  <div class="cta-register">
+    <h2>Join Varthamaan Yoga Today</h2>
+    <p>Make yoga a part of your daily life. Message us on WhatsApp to reserve your spot.</p>
+    <a href="https://wa.me/916303306297" class="whatsapp-btn" target="_blank" rel="noopener">
+      <span class="wa-ic">✆</span> 6303306297
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-col" style="max-width:320px;">
+        <div class="footer-brand">VARTHAMAAN <span>YOGA</span></div>
+        <p>Daily yoga classes for all levels in Tadepalli. Strength, flexibility, balance and wellness — every day, in-studio or online.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <p><a href="#schedule">Schedule</a></p>
+        <p><a href="#levels">Yoga Levels</a></p>
+        <p><a href="#location">Location</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>2nd Floor, Above Bank of Baroda,<br/>Near Aravinda High School, Tadepalli</p>
+        <p><a href="https://wa.me/916303306297" target="_blank" rel="noopener">📱 6303306297</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Join Varthamaan Yoga and make <span class="accent">Yoga</span> a part of your daily life.
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/916303306297" class="float-wa" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">✆</a>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+</script>
+
+</body>
+</html>
