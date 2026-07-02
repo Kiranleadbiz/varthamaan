@@ -7,6 +7,7 @@
 <meta name="description" content="Varthamaan Yoga, Tadepalli. Daily morning, mid-morning and evening yoga batches for all levels. Advanced, Therapeutic & General Yoga. Online classes also available. Register: 6303306297" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/logo.png">
 <style>
   :root{
     --purple: #3b1f4d;
@@ -42,6 +43,7 @@
   .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1140px;margin:0 auto;}
   .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.05rem;color:var(--purple);}
   .brand .dot{color:var(--orange);}
+  .brand-logo{height:44px;width:auto;display:block;}
   .nav-links{display:flex;gap:28px;font-weight:500;font-size:0.95rem;}
   .nav-links a{color:var(--purple);opacity:0.85;transition:opacity .2s;}
   .nav-links a:hover{opacity:1;}
@@ -269,8 +271,10 @@
   /* FOOTER */
   footer{background:var(--purple-dark);color:#fff;padding:50px 0 24px;}
   .footer-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;margin-bottom:36px;}
-  .footer-brand{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;margin-bottom:10px;}
-  .footer-brand span{color:var(--orange);}
+  .footer-logo{
+    height:70px;width:auto;margin-bottom:14px;
+    background:#fff;border-radius:12px;padding:8px 14px;
+  }
   .footer-col p, .footer-col a{color:rgba(255,255,255,0.7);font-size:0.9rem;line-height:1.8;}
   .footer-col h4{font-size:0.95rem;margin-bottom:12px;color:#fff;}
   .footer-bottom{
@@ -328,7 +332,7 @@
 
 <nav class="nav">
   <div class="nav-inner">
-    <div class="brand">🕉️ VARTHAMAAN<span class="dot">&nbsp;YOGA</span></div>
+    <div class="brand"><img src="assets/logo.png" alt="Varthamaan Yoga logo" class="brand-logo" /></div>
     <div class="nav-links" id="navLinks">
       <a href="#schedule">Schedule</a>
       <a href="#benefits">Benefits</a>
@@ -579,7 +583,7 @@
   <div class="container">
     <div class="footer-top">
       <div class="footer-col" style="max-width:320px;">
-        <div class="footer-brand">VARTHAMAAN <span>YOGA</span></div>
+        <img src="assets/logo.png" alt="Varthamaan Yoga logo" class="footer-logo" />
         <p>Yoga classes for all levels in Tadepalli, 5 days a week, plus weekend workshops. Strength, flexibility, balance and wellness — in-studio or online.</p>
       </div>
       <div class="footer-col">
